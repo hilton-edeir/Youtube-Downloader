@@ -4,10 +4,6 @@ from pytube import YouTube
 
 
 def home(request):
-    return render(request, "home.html")
-
-
-def download(request):
     if request.method == "POST":
         link = request.POST['link']
 
@@ -19,4 +15,6 @@ def download(request):
         except:
             messages.add_message(request, messages.ERROR, 'Download failed, please try again')
 
+
     return render(request, "home.html")
+

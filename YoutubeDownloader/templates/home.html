@@ -34,13 +34,13 @@
         {% endfor %}
     </div>
 
-    <div class="container pt-4">
-        <form action="{% url 'download'%}" method="POST">
+    <div class="container p-4">
+        <form action="{% url 'home'%}" method="POST">
             {% csrf_token %}
             <div class="input-group mb-3">
                 <input name="link" type="text" class="form-control" placeholder="Insert a youtube link" required>
                 <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit">Download</button>
+                    <button class="btn custom-btn-primary" type="submit">Download</button>
                 </div>
             </div>
         </form>
@@ -49,5 +49,9 @@
     <div class="container pt-3">
 
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
