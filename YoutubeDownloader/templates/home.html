@@ -50,11 +50,12 @@
         {% if empty == False %}
             <div>
                 {% for resolution in video_resolutions %}
-                    <p>{{ resolution }}
-                        <form action="{% url 'home' %}" method="GET">
-                            <button type="submit" class="btn btn-secondary btn-sm">Down</button>
-                        </form>
-                    </p>
+                    {{ resolution }}
+                    <form action="{% url 'home' %}" method="GET">
+                        <button name="video" type="submit" class="btn btn-secondary btn-sm"><ion-icon name="cloud-download-outline"></ion-icon></button>
+                    </form>
+                    <br>
+                    <hr>
                 {% endfor %}
             </div>
         {% endif %}

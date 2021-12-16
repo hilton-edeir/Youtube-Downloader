@@ -17,8 +17,17 @@ def home(request):
                 empty = True
 
             return render(request, "home.html", {"video_resolutions": video, "empty": empty})
+        
         except:
             messages.add_message(request, messages.ERROR, 'Download failed, please try again')
+
+    if request.method == "GET":
+        try:
+            video = request.GET['video']
+            video.download()
+
+        except:
+            messages.add_message(request, messages.ERROR, 'Download failed, please try again - ')
 
     return render(request, "home.html")
 
