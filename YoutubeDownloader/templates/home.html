@@ -51,10 +51,7 @@
             <div>
                 {% for video in list_videos %}
                     {{ video }}
-                    <form action="{% url 'download' video %}" method="POST">
-                        {% csrf_token %}
-                        <button name="video" type="submit" class="btn btn-secondary btn-sm"><ion-icon name="cloud-download-outline"></ion-icon></button>
-                    </form>
+                    <a href="{% url 'download' video %}" class="btn btn-secondary btn-sm"><ion-icon name="cloud-download-outline"></ion-icon></a>
                     <br>
                     <hr>
                 {% endfor %}

@@ -25,11 +25,10 @@ def home(request):
 
 
 def download(request, video):
-    if request.method == "POST":
-        try:
-            video.download()
+    try:
+        video.download()
 
-        except:
-            messages.add_message(request, messages.ERROR, "Download failed, please try again")
+    except:
+        messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
     return render(request, "home.html")
