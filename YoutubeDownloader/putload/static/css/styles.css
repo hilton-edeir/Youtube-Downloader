@@ -7,6 +7,10 @@ body {
     padding: 3rem;
 }
 
+input {
+
+}
+
 .main-title {
     font-family: 'Maven Pro';
     font-weight: 700;
