@@ -29,7 +29,7 @@
         {% for message in messages %}
             <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                 {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
             </div>
         {% endfor %}
     </div>
@@ -47,7 +47,13 @@
     </div>
 
     <div class="container pt-3">
-
+        {% if empty == False %}
+            <div>
+                {% for resolution in video_resolutions %}
+                    <p>{{ resolution }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -11,10 +11,14 @@ def home(request):
             yt = YouTube(link)
             videos = yt.streams
             video = list(enumerate(videos))
+            empty = False
 
+            if len(video) == 0:
+                empty = True
+
+            return render(request, "home.html", {"video_resolutions": video, "empty": empty})
         except:
             messages.add_message(request, messages.ERROR, 'Download failed, please try again')
-
 
     return render(request, "home.html")
 

@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="067a4e6a-8490-4c04-a2c2-29ec1daa61a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/YoutubeDownloader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/YoutubeDownloader.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YoutubeDownloader/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeDownloader/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/putload/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/putload/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/putload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/putload/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
@@ -90,7 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639614052921</updated>
       <workItem from="1639614098611" duration="56000" />
-      <workItem from="1639614281640" duration="5086000" />
+      <workItem from="1639614281640" duration="5801000" />
     </task>
     <servers />
   </component>
