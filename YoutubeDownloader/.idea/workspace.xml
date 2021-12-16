@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="067a4e6a-8490-4c04-a2c2-29ec1daa61a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/putload/static/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,6 +37,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -75,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639614052921</updated>
       <workItem from="1639614098611" duration="56000" />
-      <workItem from="1639614281640" duration="1013000" />
+      <workItem from="1639614281640" duration="1332000" />
     </task>
     <servers />
   </component>
