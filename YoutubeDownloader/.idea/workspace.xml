@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067a4e6a-8490-4c04-a2c2-29ec1daa61a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YoutubeDownloader/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeDownloader/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="YoutubeDownloader" type="Python.DjangoServer" factoryName="Django server">
@@ -69,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639614052921</updated>
       <workItem from="1639614098611" duration="56000" />
-      <workItem from="1639614281640" duration="707000" />
+      <workItem from="1639614281640" duration="1013000" />
     </task>
     <servers />
   </component>
