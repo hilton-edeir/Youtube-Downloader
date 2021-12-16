@@ -35,7 +35,7 @@
     </div>
 
     <div class="container p-4">
-        <form action="{% url 'home'%}" method="POST">
+        <form action="{% url 'home' %}" method="POST">
             {% csrf_token %}
             <div class="input-group mb-3">
                 <input name="link" type="text" class="form-control" placeholder="Insert a youtube link" required>
@@ -49,9 +49,9 @@
     <div class="container pt-3">
         {% if empty == False %}
             <div>
-                {% for resolution in video_resolutions %}
-                    {{ resolution }}
-                    <form action="{% url 'home' %}" method="GET">
+                {% for video in list_videos %}
+                    {{ video }}
+                    <form action="{% url 'download' %}" method="POST">
                         <button name="video" type="submit" class="btn btn-secondary btn-sm"><ion-icon name="cloud-download-outline"></ion-icon></button>
                     </form>
                     <br>

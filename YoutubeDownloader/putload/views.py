@@ -10,24 +10,27 @@ def home(request):
         try:
             yt = YouTube(link)
             videos = yt.streams
-            video = list(enumerate(videos))
+            list_videos = list(enumerate(videos))
             empty = False
 
-            if len(video) == 0:
+            if len(list_videos) == 0:
                 empty = True
 
-            return render(request, "home.html", {"video_resolutions": video, "empty": empty})
-        
+            return render(request, "home.html", {"list_videos": list_videos, "empty": empty})
+
         except:
             messages.add_message(request, messages.ERROR, 'Download failed, please try again')
 
-    if request.method == "GET":
+    return render(request, "home.html")
+
+
+def download(request):
+    if request.method == "POST":
+        video = request.POST['video']
         try:
-            video = request.GET['video']
             video.download()
 
         except:
             messages.add_message(request, messages.ERROR, 'Download failed, please try again - ')
 
     return render(request, "home.html")
-
