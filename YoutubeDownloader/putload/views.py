@@ -19,18 +19,17 @@ def home(request):
             return render(request, "home.html", {"list_videos": list_videos, "empty": empty})
 
         except:
-            messages.add_message(request, messages.ERROR, 'Download failed, please try again')
+            messages.add_message(request, messages.ERROR, "We couldn't find nothing, please try again")
 
     return render(request, "home.html")
 
 
-def download(request):
+def download(request, video):
     if request.method == "POST":
-        video = request.POST['video']
         try:
             video.download()
 
         except:
-            messages.add_message(request, messages.ERROR, 'Download failed, please try again - ')
+            messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
     return render(request, "home.html")
