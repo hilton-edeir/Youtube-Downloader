@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="067a4e6a-8490-4c04-a2c2-29ec1daa61a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YoutubeDownloader/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/YoutubeDownloader/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/putload/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/putload/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="22LPmLLSoPZgloAkIqX3iULOkZQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -78,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639614052921</updated>
       <workItem from="1639614098611" duration="56000" />
-      <workItem from="1639614281640" duration="2393000" />
+      <workItem from="1639614281640" duration="3380000" />
     </task>
     <servers />
   </component>

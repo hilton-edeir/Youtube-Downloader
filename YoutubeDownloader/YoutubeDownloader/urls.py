@@ -20,6 +20,5 @@ from putload import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('home/', views.home, name="home"),
-    path('download/<str:pk_course>', views.download, name="download"),
+    path('download/', views.download, name="download"),
 ]
