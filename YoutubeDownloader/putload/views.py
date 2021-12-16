@@ -7,7 +7,8 @@ def home(request):
     if request.method == "POST":
         link = request.POST['link_yt']
         video = YouTube(link)
-        video.streams.get_by_itag(137)
+        print(video.streams.filter(file_extension="mp4"))
+        video.streams.get_by_itag(18).download()
 
 
         '''
