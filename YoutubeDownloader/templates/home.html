@@ -27,13 +27,18 @@
 
     <div class="container pt-4">
         <form action="{% url 'download'%}" method="POST">
+            {% csrf_token %}
             <div class="input-group mb-3">
-                <input name="link_input" type="text" class="form-control" placeholder="Insert a youtube link">
+                <input name="link" type="text" class="form-control" placeholder="Insert a youtube link" required>
                 <div class="input-group-append">
-                    <button class="btn btn-primary" type="submit">Button</button>
+                    <button class="btn btn-primary" type="submit">Download</button>
                 </div>
             </div>
         </form>
+    </div>
+
+    <div class="container pt-3">
+
     </div>
 </body>
 </html>

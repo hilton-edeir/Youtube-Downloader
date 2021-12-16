@@ -8,8 +8,12 @@ def home(request):
 
 def download(request):
     if request.method == "POST":
-        link = request.POST['link_input']
+        link = request.POST['link']
         yt = YouTube(link)
         videos = yt.streams.all()
         video = list(enumerate(videos))
+
+        for i in video:
+            print(i)
+
     return render(request, "home.html")
