@@ -24,6 +24,11 @@ body::-webkit-scrollbar-thumb {
     font-weight: 700;
 }
 
+.secondary-title {
+    font-family: 'Maven Pro';
+}
+
+
 input:focus {
   box-shadow: none!important;
   border-color: rgba(254,90,135,255)!important;

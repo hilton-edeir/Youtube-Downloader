@@ -4,22 +4,28 @@
 {% block video_thumbnail %}
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <card class="card-body">
+            <div class="col-md-4">
+                <card class="card p-4">
                     <img src="{{ video_thumbnail }}" class="img-fluid">
                 </card>
             </div>
-            <div class="col-md-3">
-                <form action="{% url 'download-video' %}" method="POST">
-                    <input type="hidden" name="video" value="{{ video_streams }}">
-                    <button type="submit" class="btn btn-secondary">Download Video</button>
-                </form>
-            </div>
-            <div class="col-md-3">
-                <form action="{% url 'download-audio' %}" method="POST">
-                    <input type="hidden" name="video" value="{{ video_streams }}">
-                    <button type="submit" class="btn btn-secondary">Download Audio</button>
-                </form>
+            <div class="col-md-8">
+                <div class="row">
+                    <h4 class="secondary-title">Title</h4>
+                    <span>{{ video_title }}</span>
+                </div>
+                <div class="row pt-4">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <form action="{% url 'download-video' %}" method="POST">
+                            <input type="hidden" name="video" value="{{ video_streams }}">
+                            <button type="submit" class="btn btn-success btn-sm">Download Video</button>
+                        </form>
+                        <form action="{% url 'download-audio' %}" method="POST">
+                            <input type="hidden" name="video" value="{{ video_streams }}">
+                            <button type="submit" class="btn btn-success btn-sm">Download Audio</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

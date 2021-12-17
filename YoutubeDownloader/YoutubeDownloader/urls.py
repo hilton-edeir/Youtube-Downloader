@@ -20,6 +20,6 @@ from putload import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('download-video', name="download-video"),
-    path('download-audio/', name="download-audio"),
+    path('download-video', views.downnload_video, name="download-video"),
+    path('download-audio/', views.downnload_audio, name="download-audio"),
 ]
