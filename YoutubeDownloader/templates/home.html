@@ -21,7 +21,7 @@
             <h2 class="main-title">PutLoad</h2>
         </div>
         <div class="d-flex justify-content-center">
-            <p>Download videos from youtube with the highest qualities available</p>
+            <span>Download videos from youtube with the highest qualities available</span>
         </div>
     </div>
 
@@ -36,10 +36,16 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row pb-5">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <input id="search-video" name="yt_link" type="url" class="form-control form-control-lg" placeholder="Insert a youtube link" required>
+            <form action="{% url 'home' %}" method="POST">
+                {% csrf_token %}
+                <div class="input-group input-group-lg">
+                    <button type="submit" class="input-group-text custom-btn-primary"><ion-icon name="search-outline"></ion-icon></button>
+                    <input id="search-video" name="yt_link" type="url" class="form-control" placeholder="Insert a youtube link" required>
+                </div>
+            </form>
         </div>
         <div class="col-md-2"></div>
     </div>

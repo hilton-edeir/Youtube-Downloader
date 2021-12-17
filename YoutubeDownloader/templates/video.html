@@ -4,36 +4,42 @@
 {% block video %}
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <card class="card p-4">
-                    <img src="{{ video.thumbnail_url }}" class="img-fluid">
-                </card>
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="row">
-                    <h5 class="secondary-title">Title</h5>
-                    <span>{{ video.title }}</span>
-                </div>
-                <div class="row">
-                    <h5 class="secondary-title pt-2">Duration</h5>
-                    <span>{{ video.length }} seconds</span>
-                </div>
+                    <div class="col-md-4">
+                        <card class="card p-3">
+                            <img src="{{ video.thumbnail_url }}" class="img-fluid">
+                        </card>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <h5 class="secondary-title">Title</h5>
+                            <p>{{ video.title }}</p>
+                        </div>
+                        <div class="row">
+                            <h5 class="secondary-title pt-1">Duration</h5>
+                            <p>{{ video.length }} seconds</p>
+                        </div>
 
-                <div class="row pt-5">
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                        <form action="{% url 'download-video' %}" method="POST">
-                            {% csrf_token %}
-                            <input type="hidden" name="video_link" value="{{ link }}">
-                            <button type="submit" class="btn btn-success btn-sm">Download Video</button>
-                        </form>
-                        <form action="{% url 'download-audio' %}" method="POST">
-                            {% csrf_token %}
-                            <input type="hidden" name="video_link" value="{{ link }}">
-                            <button type="submit" class="btn btn-success btn-sm">Download Audio</button>
-                        </form>
+                        <div class="row pt-3">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <form action="{% url 'download-video' %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="video_link" value="{{ link }}">
+                                    <button type="submit" class="btn btn-success btn-sm">Download Video</button>
+                                </form>
+                                <form action="{% url 'download-audio' %}" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="video_link" value="{{ link }}">
+                                    <button type="submit" class="btn btn-success btn-sm">Download Audio</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
     </div>
 {% endblock %}
