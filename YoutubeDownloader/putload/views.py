@@ -11,27 +11,29 @@ def home(request):
 
             return render(request, "video.html", {"video": video, "link": link})
 
-        except:
+        except Exception as exception:
+            print(exception)
             messages.add_message(request, messages.ERROR, "Something went wrong, please try again")
 
     return render(request, "home.html")
 
 
-def downnload_video(request):
+def download_video(request):
     if request.method == "POST":
         link = request.POST['video_link']
 
         try:
             video = YouTube(link)
-            video.streams.get_highest_resolution().download('~/Downloads')
+            video.streams.get_highest_resolution().download('Downloads')
             messages.add_message(request, messages.SUCCESS, "Download completed")
-        except:
+        except Exception as exception:
+            print(exception)
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
     return render(request, "home.html")
 
 
-def downnload_audio(request):
+def download_audio(request):
     if request.method == "POST":
         link = request.POST['video_link']
 
@@ -39,7 +41,8 @@ def downnload_audio(request):
             video = YouTube(link)
             video.streams.get_audio_only().download()
             messages.add_message(request, messages.SUCCESS, "Download completed")
-        except:
+        except Exception as exception:
+            print(exception)
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
     return render(request, "home.html")
