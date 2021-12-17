@@ -23,7 +23,7 @@ def downnload_video(request):
 
         try:
             video = YouTube(link)
-            video.streams.get_highest_resolution().download()
+            video.streams.get_highest_resolution().download('~/Downloads')
             messages.add_message(request, messages.SUCCESS, "Download completed")
         except:
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
