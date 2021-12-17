@@ -16,3 +16,6 @@ def home(request):
 
     return render(request, "home.html")
 
+
+def download(request):
+    pass
