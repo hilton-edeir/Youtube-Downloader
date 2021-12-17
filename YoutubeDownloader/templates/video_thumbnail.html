@@ -10,10 +10,14 @@
                 </card>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-secondary">Download Video</button>
+                <form action="{% url '' %}" method="GET">
+                    <button class="btn btn-secondary">Download Video</button>
+                </form>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-secondary">Download Audio</button>
+                <form action="{% url '' %}" method="GET">
+                    <button class="btn btn-secondary">Download Audio</button>
+                </form>
             </div>
         </div>
     </div>

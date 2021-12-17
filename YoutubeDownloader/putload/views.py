@@ -8,8 +8,10 @@ def home(request):
         try:
             link = request.POST['yt_link']
             video = YouTube(link)
+            video_streams = video.streams
+            video_thumbnail = YouTube(link).thumbnail_url
 
-            return render(request, "video_thumbnail.html", {"video": video})
+            return render(request, "video_thumbnail.html", {"video_thumbnail": video_thumbnail, "video_streams": video_streams})
 
         except:
             messages.add_message(request, messages.ERROR, "Something went wrong, please try again")
