@@ -14,25 +14,32 @@
                     </div>
                     <div class="col-md-8">
                         <div class="row">
-                            <h5 class="secondary-title">Title</h5>
+                            <h6 class="secondary-title">Title</h6>
                             <p>{{ video.title }}</p>
                         </div>
-                        <div class="row">
-                            <h5 class="secondary-title pt-1">Duration</h5>
+
+                        <div class="row pt-1">
+                            <h6 class="secondary-title">Duration</h6>
                             <p>{{ video.length }} seconds</p>
                         </div>
 
-                        <div class="row pt-3">
+                        <div class="row pt-1">
+                            <h6 class="secondary-title">Size</h6>
+                            <p>{{ video.streams.get_highest_resolution.filesize }} bytes</p>
+                        </div>
+
+                        <div class="row pt-2">
+                            <h6 class="secondary-title pt-1">Download</h6>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                                 <form action="{% url 'download-video' %}" method="POST">
                                     {% csrf_token %}
                                     <input type="hidden" name="video_link" value="{{ link }}">
-                                    <button type="submit" class="btn btn-success btn-sm">Download Video</button>
+                                    <button type="submit" class="input-group-text custom-btn-primary btn-lg"><ion-icon name="videocam-outline"></ion-icon></button>
                                 </form>
                                 <form action="{% url 'download-audio' %}" method="POST">
                                     {% csrf_token %}
                                     <input type="hidden" name="video_link" value="{{ link }}">
-                                    <button type="submit" class="btn btn-success btn-sm">Download Audio</button>
+                                    <button type="submit" class="input-group-text custom-btn-primary btn-lg"><ion-icon name="musical-notes-outline"></ion-icon></button>
                                 </form>
                             </div>
                         </div>
