@@ -8,12 +8,8 @@ def home(request):
         try:
             link = request.POST['yt_link']
             video = YouTube(link)
-            video_streams = video.streams
-            video_title = video.title
-            video_thumbnail = video.thumbnail_url
 
-            return render(request, "video_thumbnail.html",
-                          {"video_title": video_title, "video_thumbnail": video_thumbnail, "video_streams": video_streams})
+            return render(request, "video_thumbnail.html", {"video": video})
 
         except:
             messages.add_message(request, messages.ERROR, "Something went wrong, please try again")
@@ -22,9 +18,23 @@ def home(request):
 
 
 def downnload_video(request):
-    pass
+    if request.method == "POST":
+        video = request.POST['video']
+
+        try:
+            video.streams.get_highest_resolution().download()
+            messages.add_message(request, messages.SUCCESS, "Download completed")
+        except:
+            messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
 
 def downnload_audio(request):
-    pass
+    if request.method == "POST":
+        video = request.POST['video']
+
+        try:
+            video.streams.filter(file_extension="mp3").get_highest_resolution().download()
+            messages.add_message(request, messages.SUCCESS, "Download completed")
+        except:
+            messages.add_message(request, messages.ERROR, "Download failed, please try again")
 

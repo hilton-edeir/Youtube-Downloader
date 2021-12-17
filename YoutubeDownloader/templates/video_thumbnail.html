@@ -6,15 +6,20 @@
         <div class="row">
             <div class="col-md-4">
                 <card class="card p-4">
-                    <img src="{{ video_thumbnail }}" class="img-fluid">
+                    <img src="{{ video.thumbnail_url }}" class="img-fluid">
                 </card>
             </div>
             <div class="col-md-8">
                 <div class="row">
-                    <h4 class="secondary-title">Title</h4>
-                    <span>{{ video_title }}</span>
+                    <h5 class="secondary-title">Title</h5>
+                    <span>{{ video.title }}</span>
                 </div>
-                <div class="row pt-4">
+                <div class="row">
+                    <h5 class="secondary-title pt-2">Duration</h5>
+                    <span>{{ video.length }} seconds</span>
+                </div>
+
+                <div class="row pt-5">
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <form action="{% url 'download-video' %}" method="POST">
                             <input type="hidden" name="video" value="{{ video_streams }}">
