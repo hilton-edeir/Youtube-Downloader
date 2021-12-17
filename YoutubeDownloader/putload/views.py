@@ -27,6 +27,8 @@ def downnload_video(request):
         except:
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
+    return render(request, "video_thumbnail.html")
+
 
 def downnload_audio(request):
     if request.method == "POST":
@@ -38,3 +40,4 @@ def downnload_audio(request):
         except:
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
 
+    return render(request, "video_thumbnail.html")
