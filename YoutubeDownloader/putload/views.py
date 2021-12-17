@@ -20,7 +20,6 @@ def home(request):
 def downnload_video(request):
     if request.method == "POST":
         link = request.POST['video_link']
-        print(link)
         try:
             video = YouTube(link)
             video.streams.get_highest_resolution().download()
@@ -37,7 +36,7 @@ def downnload_audio(request):
 
         try:
             video = YouTube(link)
-            video.streams.filter(file_extension="mp3").get_highest_resolution().download()
+            video.streams.get_audio_only().download()
             messages.add_message(request, messages.SUCCESS, "Download completed")
         except:
             messages.add_message(request, messages.ERROR, "Download failed, please try again")
