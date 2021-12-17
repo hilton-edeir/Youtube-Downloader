@@ -9,11 +9,10 @@ def home(request):
         try:
             link = request.POST['yt_link']
             video = YouTube(link)
-            video.streams.get_by_itag(18).download()
+            video.streams.get_highest_resolution().download()
 
         except:
             messages.add_message(request, messages.ERROR, "Something went wrong, please try again")
 
     return render(request, "home.html")
-
 
