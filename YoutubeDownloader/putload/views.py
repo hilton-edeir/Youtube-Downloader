@@ -2,8 +2,6 @@ from django.contrib import messages
 from django.shortcuts import render
 from pytube import YouTube
 
-PATH = "C:\users\edeir\Downloads"
-
 
 def home(request):
     if request.method == "POST":
@@ -11,7 +9,7 @@ def home(request):
         try:
             link = request.POST['yt_link']
             video = YouTube(link)
-            video.streams.get_by_itag(18).download(PATH)
+            video.streams.get_by_itag(18).download()
 
         except:
             messages.add_message(request, messages.ERROR, "Something went wrong, please try again")
