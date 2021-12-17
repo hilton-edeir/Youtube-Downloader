@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
     path('download-video', views.downnload_video, name="download-video"),
-    path('download-audio/', views.downnload_audio, name="download-audio"),
+    path('download-audio', views.downnload_audio, name="download-audio"),
 ]

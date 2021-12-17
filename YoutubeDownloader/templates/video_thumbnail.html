@@ -23,12 +23,12 @@
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
                         <form action="{% url 'download-video' %}" method="POST">
                             {% csrf_token %}
-                            <input type="hidden" name="video" value="{{ video }}">
+                            <input type="hidden" name="video_link" value="{{ link }}">
                             <button type="submit" class="btn btn-success btn-sm">Download Video</button>
                         </form>
                         <form action="{% url 'download-audio' %}" method="POST">
                             {% csrf_token %}
-                            <input type="hidden" name="video" value="{{ video}}">
+                            <input type="hidden" name="video_link" value="{{ link }}">
                             <button type="submit" class="btn btn-success btn-sm">Download Audio</button>
                         </form>
                     </div>
