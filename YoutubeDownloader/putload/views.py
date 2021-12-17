@@ -20,6 +20,7 @@ def home(request):
 def downnload_video(request):
     if request.method == "POST":
         link = request.POST['video_link']
+
         try:
             video = YouTube(link)
             video.streams.get_highest_resolution().download()
