@@ -19,10 +19,10 @@ def home(request):
     return render(request, "home.html")
 
 
-def downnload_video(request, video):
+def downnload_video(request):
     pass
 
 
-def downnload_audio(request, video):
+def downnload_audio(request):
     pass
 
